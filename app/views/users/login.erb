@@ -1,0 +1,19 @@
+<div class="new">
+<h1>Login</h1>
+
+
+<div class="errors">
+    <% if @user.nil? %>
+      <ul>
+        <li>The name or password entered was incorrect.</li>
+      <ul>
+    <% end %>
+  </div>
+
+
+<form class="login-form" method="post" action="/session">
+<input name="username" type="text" placeholder="username"><br>
+<input name="password" type="password" placeholder="password"><br>
+<input type="submit" value="Submit">
+</form>
+</div>

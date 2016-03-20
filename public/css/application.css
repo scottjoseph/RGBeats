@@ -1,0 +1,88 @@
+.login {
+  background-color: black;
+  height: 100px;
+  border-bottom: 4px solid white;
+  padding-right: 50px;
+}
+
+.nav-form-container {
+  float:right;
+}
+
+
+.login-form, .register-form {
+
+  margin-top: 15px;
+}
+
+.nav-loggedin a, .nav-notlogged a {
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  background-color: black;
+  float: right;
+  margin-top: 35px;
+  padding-right:10px;
+  padding-left:5px;
+  position: relative;
+  font-size: 20px;
+}
+
+.site-name a {
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  background-color: black;
+  float: left;
+  margin-top: 15px;
+  padding-left:50px;
+  position: relative;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.background {
+  /*background: linear-gradient(#006699, #002133);*/
+  background-image: url("http://3.bp.blogspot.com/_uTGKd6u5pJ4/TQI1skqtXGI/AAAAAAAAAIY/wqYqWSgRnoM/s1600/Graffiti-music-wallpaper-by-LOL55555.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+.container {
+  background-color: white;
+  text-align: center;
+  height: 600px;
+}
+
+.index-center {
+  /*background-color: grey;*/
+  /*width: 10%;*/
+  margin: auto;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 44%;
+}
+
+.center {
+  opacity: 0.6;
+  margin: auto;
+  width:  60%;
+  padding: 10px;
+}
+
+.register-button, .login-button {
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 10px;
+  height: 10px;
+  width: 25px;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+}
+
+a:hover {
+  opacity: 0.5;
+}
