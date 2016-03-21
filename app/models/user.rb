@@ -2,11 +2,9 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   include BCrypt
-  has_many :reviews
-  has_many :restaurants
 
   validates_presence_of :username, :email, :encrypted_password
-  validates_uniqueness_of :email
+  validates_uniqueness_of :username
 
 
   def password

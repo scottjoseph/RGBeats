@@ -1,22 +1,20 @@
-get '/users' do
-  erb :'index'
-end
+# get '/users' do
+#   erb :'index'
+# end
 
 get '/users/new' do
   @new_user = User.new
   if request.xhr?
-    erb :'users/new', layout: false
+    erb :'users/_new', layout: false
   end
 end
 
 post '/users' do
   @user = User.new(params[:user])
-  # if request.xhr?
     if @user.save
       session[:user_id] = @user.id
       redirect '/'
     end
-  # end
 end
 
 get '/users/login' do
@@ -31,15 +29,19 @@ get '/users/:id/logout' do
   redirect '/'
 end
 
-# get '/users/:id' do
-#   @user = User.find(params[:id])
-#   erb :'users/show'
-# end
+get '/users/:id' do
+  @user = User.find(params[:id])
+  erb :'users/show'
+end
 
-# get '/users/:id/edit' do
-#   @user = User.find(params[:id]) #define intstance variable for view
-#   erb :'users/edit' #shows view with edit user form
-# end
+get '/users/:id/edit' do
+  @user = User.find(params[:id]) #define intstance variable for view
+  if owner?
+    erb :'users/edit' #shows view with edit user form
+  else
+    redirect "/"
+  end
+end
 
 # put '/users/:id' do
 #   @user = User.find(params[:id])
@@ -51,9 +53,14 @@ end
 #   end
 # end
 
-# delete '/users/:id' do
-#   @user = User.find(params[:id])
-#   @user.clear
-#   redirect '/users'
-# end
+delete '/users/:id' do
+  if owner?
+    puts "logged in as test. wtf"
+    @user = User.find(params[:id])
+    @user.delete
+    redirect '/'
+  else
+    redirect '/'
+  end
+end
 

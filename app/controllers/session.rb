@@ -1,12 +1,9 @@
 post '/session' do
-    @user = User.find_by(username: params[:username])
-    if request.xhr?
+  @user = User.find_by(username: params[:username])
+    if @user && @user.authentic?(params[:password])
       session[:user_id] = @user.id
-      if @user && @user.authentic?(params[:password])
-        redirect '/' #redirect to somewhere else
-      else
-        # erb :'users/login'
-        redirect '/'
-      end
+      redirect '/'
+    else
+      erb :'users/_login', layout: false
     end
 end

@@ -5,11 +5,11 @@ helpers do
   end
 
   def logged_in?
-    true if session[:user_id]
+    session[:user_id]
   end
 
   def owner?
-    session[:user_id] == current_user.id
+    @user.id == logged_in?
   end
 
 end
