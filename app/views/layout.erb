@@ -5,31 +5,51 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
 
+
   <script src="/js/jquery.js"></script>
   <script src="/js/application.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/js/color-picker.js"></script>
+
+
+  <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
+  <link rel='stylesheet' href='http://bgrins.github.io/spectrum/spectrum.css'>
+ -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
+  <link rel='stylesheet' href='http://bgrins.github.io/spectrum/spectrum.css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js"></script>
+  <script src="http://builds.emberjs.com/tags/v1.5.0/ember.js"></script>
+  <script src='http://bgrins.github.io/spectrum/spectrum.js'></script>
 
 
 
-  <title></title>
-  <div class="site-name"><a href="/">Site Title</a></div>
+
+
+
+
+
+  <title>R/G/Beats</title>
+  <div class="site-name"><a href="/"><img src="/img/rgbelogo.png" alt="R/G/Beats"></a></div>
   <div class="login">
-<div class="nav-form-container">
-  <% if logged_in? %>
-  <div class='nav-loggedin'>
-    <a href="/users/<%= current_user.id %>/logout">Logout</a>
-    <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+    <div class="nav-form-container">
+      <% if logged_in? %>
+        <div class='nav-loggedin'>
+          <a href="/logout">Logout</a>
+          <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+        </div>
+      <% else %>
+        <div class='nav-notlogged'>
+          <a class="login-link" href="/session/new">Login</a>
+          <a class="register-link" href="/users/new">Register</a>
+          <div class="errors">
+            <% if @errors %>
+              <article> The name or password entered was incorrect.</article>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <% else %>
-
-  <div class='nav-notlogged'>
-    <a class="login-link" href="/users/login">Login</a>
-    <a class="register-link" href="/users/new">Register</a>
-  </div>
-
-  <% end %>
-</div>
-</div>
 </head>
 <body class="background">
   <%= yield %>

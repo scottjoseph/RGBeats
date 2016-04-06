@@ -1,3 +1,34 @@
+#color-picker {
+  background-color: red;
+}
+
+.non-logged-index {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+
+.non-logged-index a {
+  text-shadow: 3px 3px black;
+  text-decoration: none;
+  color: white;
+}
+
+.side-bar {
+  position: fixed;
+  z-index: -100;
+  background-color: #000;
+  width: 150px;
+  height: 100%;
+  opacity: 0.9;
+  border-right: 5px solid white;
+}
+
 .login {
   background-color: black;
   height: 100px;
@@ -7,11 +38,40 @@
 
 .nav-form-container {
   float:right;
+  height: 100px;
+}
+
+.new {
+  position: fixed;
+  left: 44%;
+  top: 40%;
+  text-align: center;
+}
+
+
+.errors{
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 1px #000000;
+  display: inline-block;
 }
 
 
 .login-form, .register-form {
   margin-top: 15px;
+}
+
+.login-button, .register-button {
+  text-decoration: underline;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+}
+
+.login-button:hover, .register-button:hover{
+  opacity: 0.6;
 }
 
 .nav-loggedin a, .nav-notlogged a {
@@ -40,12 +100,23 @@
   text-decoration: none;
 }
 
+.site-name img {
+  height: 64px;
+}
+
 .background {
   /*background: linear-gradient(#006699, #002133);*/
   background-image: url("http://3.bp.blogspot.com/_uTGKd6u5pJ4/TQI1skqtXGI/AAAAAAAAAIY/wqYqWSgRnoM/s1600/Graffiti-music-wallpaper-by-LOL55555.jpg");
+    background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-size: 100% auto;
   background-attachment: fixed;
+}
+
+.login {
+/*  background-image: url("/img/grf_4_08.png");
+    background-size: 100% auto;
+    background-size: auto;*/
+
 }
 
 .container {
@@ -55,8 +126,8 @@
 }
 
 .index-center {
-  /*background-color: grey;*/
-  /*width: 10%;*/
+  background-color: grey;
+  width: 10%;
   margin: auto;
   text-align: center;
   position: fixed;
@@ -84,4 +155,74 @@ a:hover {
 
 .user-delete {
   background-color: grey;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*br {
+  margin: 25px;
+  background-color: red;
+}*/
+
+/*//=============================*/
+
+.ember-view {
+  /*background-color: grey;*/
+  margin-top: 15px;
+  margin-left: 3px;
+  float: left;
+  width: 100px;
+}
+
+/* Put your CSS here */
+
+input: {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.color-swatch {
+  height: 70px;
+  width: 135px;
+  border-radius: 4px;
+  border: 1px solid #000;
+}
+
+.rgb-input
+{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: white;
+}
+
+
+.rgb {
+  width: 40px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: transparent;
+  margin-top: 10px;
+  color: white;
+  padding-right: 80px;
+}
+
+.rgb-button {
+  text-align: center;
+  width: 40px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: grey;
+  margin-top: 10px;
+  color: white;
+  padding-right: 120px;
+}
+
+.rgb-button:active {
+  opacity: 0.6;
 }

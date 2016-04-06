@@ -1,7 +1,7 @@
 <div class="new">
-<h1>Registration</h1>
+<!--   <h1>Registration</h1> -->
 
-<div class="errors">
+  <div class="errors">
     <% if @new_user.errors %>
       <ul>
       <% @new_user.errors.full_messages.each do |error| %>
@@ -11,10 +11,10 @@
     <% end %>
   </div>
 
-<form class="register-form" method="post" action="/users">
-  <input name="user[username]" type="text" placeholder="username"><br>
-  <input name="user[email]" type="text" placeholder="email"><br>
-  <input name="user[password]" type="password" placeholder="password"><br>
-  <input type="submit" value="Submit"></button>
+  <form class="register-form" method="post" action="/users">
+    <input name="user[username]" type="text" placeholder="username"><br>
+    <input name="user[email]" type="text" placeholder="email"><br>
+    <input name="user[password]" type="password" placeholder="password"><br><br>
+    <input class="register-button" type="submit" value="Register"></button>
   </form>
 </div>

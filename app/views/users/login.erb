@@ -1,19 +1,20 @@
 <div class="new">
-<h1>Login</h1>
 
 
-<div class="errors">
-    <% if @user.nil? %>
+  <div class="errors">
+    <% if @errors %>
       <ul>
-        <li>The name or password entered was incorrect.</li>
+        <% @errors.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       <ul>
     <% end %>
   </div>
 
-
-<form class="login-form" method="post" action="/session">
-<input name="username" type="text" placeholder="username"><br>
-<input name="password" type="password" placeholder="password"><br>
-<input type="submit" value="Submit">
-</form>
+  <form class="login-form" method="post" action="/session">
+    <input name="username" type="text" placeholder="username"><br>
+    <input name="password" type="password" placeholder="password"><br><br>
+    <input class="login-button" type="submit" value="Login">
+  </form>
+<!--     <h1>Login</h1> -->
 </div>
