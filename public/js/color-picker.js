@@ -3,7 +3,7 @@ $(document).ready(function() {
 App = Ember.Application.create();
 
 App.ColorPickerComponent = Ember.Component.extend({
-  color: '#ffffff',
+  color: '#000000',
 
   style: function() {
     return 'background-color:' + this.get('color');
