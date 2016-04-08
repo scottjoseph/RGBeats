@@ -83,7 +83,7 @@ $(document).ready(function() {
     var trackId = ""
     if (red > 204){
       //rock
-      trackId = "323vx2loX6l7g5wwWzlU1m"
+      trackId = "5VVWgWH8HFLAtM8lbttvn9"
     } else if (red > 153){
       //rap | hip-hop
       trackId = "5dX9fDuiEkcEg12v6JQ4iO"
@@ -97,12 +97,9 @@ $(document).ready(function() {
       //dance
       trackId = "4jacsL77ZYnpInmTtUBaJW"
     };
-    // console.log(red);
-    // console.log(green);
-    // console.log(blue);
+
 
     var url = "https://api.spotify.com/v1/tracks/" + trackId
-    // console.log(url);
     var request = $.ajax({
       url: url
     });
