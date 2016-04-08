@@ -121,12 +121,15 @@
 }
 
 .spotify {
-  /*background-color: red;*/
+  background-color: black;
+  font-weight: bold;
+  color: #fff;
   text-align: center;
   margin-right: 540px;
   /*width:1600;*/
   display: inline;
   float: right;
+
 }
 
 .container {

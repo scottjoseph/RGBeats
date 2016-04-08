@@ -82,6 +82,9 @@ $(document).ready(function() {
 // 51, 102, 153, 204, 255
     var trackGenre = ""
     var trackId = ""
+    var trackArtist = ""
+    var trackTitle = ""
+
     if (red > 204){
       trackGenre = "rock"
     } else if (red > 153){
@@ -98,46 +101,93 @@ $(document).ready(function() {
       case "rock":
         if (green > blue){
           trackId = "3otkWCw3GxRkdBkJK18OsJ";
+          //
+          trackArtist = "Elsinore"
+          trackTitle = "Chemicals"
          } else if (green < blue) {
           trackId = "0grFc6klR3hxoHLcgCYsF4";
+          //
+          trackArtist = "The Black Keys"
+          trackTitle = "Howlin' For You"
          } else {
-          trackId = "10zlwR7kvVbD9OBkeZWr3L";
+          trackId = "57bgtoPSgt236HzfBOd8kj";
+          //
+          trackArtist = "AC/DC"
+          trackTitle = "Thunderstruck"
          }
           break;
       case "rap":
         if (green > blue){
-          trackId = "6B2RPIeLqJyzZpR4334BWk";
+          trackId = "40bnezAtQkyVSYk5ueQVJG";
+          //
+          trackArtist = "YONAS"
+          trackTitle = "Photo"
         } else if (green < blue){
           trackId = "3fyMH1t6UPeR5croea9PrR";
+          //
+          trackArtist = "Drake"
+          trackTitle = "Best I Ever Had"
         } else {
           trackId = "2wBCrtJS3E3TimRZ5MElTI";
+          //
+          trackArtist = "Jhene Aiko"
+          trackTitle = "The Worst"
         }
+
+
         break;
       case "pop":
         if (green > blue){
           trackId = "455AfCsOhhLPRc68sE01D8";
+          //
+          trackArtist = "Katy Perry"
+          trackTitle = "TGIF"
         } else if (green < blue){
-          trackId = "0GO8y8jQk1PkHzS31d699N";
+          trackId = "717TY4sfgKQm4kFbYQIzgo";
+          //
+          trackArtist = "Britney Spears"
+          trackTitle = "Toxic"
         } else {
           trackId = "0GO8y8jQk1PkHzS31d699N"
+          //
+          trackArtist = "Grouplove"
+          trackTitle = "Tongue Tied"
         }
         break;
       case "country":
         if (green > blue){
           trackId = "5fSPbm5lcwtqwXkeQQswW8"
+          //
+          trackArtist = "Eric Church"
+          trackTitle = "Record Year"
         } else if (green < blue){
           trackId = "1WzAeadSKJhqykZFbJNmQv"
+          //
+          trackArtist = "Josh Turner"
+          trackTitle = "Your Man"
         } else {
           trackId = "0V4qXGKnZ6mXnWXDpda8d2"
+          //
+          trackArtist = "Lauren Alaina"
+          trackTitle = "Next Boyfriend"
         }
         break;
       case "dance":
         if (green > blue){
           trackId = "6BtC99zhdbWXPGgEOXTTvw"
+          //
+          trackArtist = "Glass Animals"
+          trackTitle = "Wyrd"
         } else if ( green < blue){
           trackId = "4jacsL77ZYnpInmTtUBaJW"
+          //
+          trackArtist = "Junior Senior"
+          trackTitle = "Move Your Feet"
         } else {
           trackId = "5M0DX04ViGG3T1NXiB9EOu"
+          //
+          trackArtist = "Slumberjack ft KLP"
+          trackTitle = "The Others(NGHTMRE REMIX)"
         }
 
     }
@@ -150,7 +200,7 @@ $(document).ready(function() {
 
     request.done(function(song){
       $(".spotify").empty()
-      $(".spotify").append("<iframe src=" + song.preview_url + " width=820 height=100></iframe>")
+      $(".spotify").append("<iframe src=" + song.preview_url + " width=820 height=100></iframe><br>" + trackTitle + " - " + trackArtist)
     });
   });
 
