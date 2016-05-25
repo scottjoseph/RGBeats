@@ -72,6 +72,9 @@ if (window.FileReader) {
                     // console.log(colorThief.getColor(img));
                     var color = colorThief.getColor(img);
                     document.getElementById("color-box").style.backgroundColor = "rgb(" + color + ")";
+                    $("#color-box").append("<div>Red: "+ color[0] + "<br>" + "Green: " + color[1] + "<br>" + "Blue: " + color[2] +"</div>");
+
+
 
                     var songButton = document.createElement("button");
                     songButton.className = "song-button";
@@ -85,9 +88,9 @@ if (window.FileReader) {
                     $(".song-button").on("click", function(){
     event.preventDefault();
 
-    var red = color[1];
-    var green = color[2]
-    var blue = color[3]
+    var red = color[0];
+    var green = color[1]
+    var blue = color[2]
 // 51, 102, 153, 204, 255
     var trackGenre = ""
     var trackId = ""
@@ -206,7 +209,6 @@ if (window.FileReader) {
     });
 
     request.done(function(song){
-      console.log(song);
     var albumArt = song.album.images[1].url;
     var trackArtist = song.artists[0].name
     var trackTitle = song.name
