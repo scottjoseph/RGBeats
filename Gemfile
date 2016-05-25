@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
+ruby '2.2.3'
 
 
 # PostgreSQL driver
@@ -17,7 +17,6 @@ gem 'rake'
 gem 'rack', '1.5.2'
 gem 'shotgun'
 
-gem 'bcrypt'
 
 group :test do
   gem 'shoulda-matchers'

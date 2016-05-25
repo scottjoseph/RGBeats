@@ -9,51 +9,20 @@
 
   <script src="/js/jquery.js"></script>
   <script src="/js/application.js"></script>
-  <script src="/js/color-picker.js"></script>
-  <script src="/js/rgb-calc.js"></script>
 
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-  <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
-  <link rel='stylesheet' href='http://bgrins.github.io/spectrum/spectrum.css'>
- -->
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
-  <link rel='stylesheet' href='http://bgrins.github.io/spectrum/spectrum.css'>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js"></script>
-  <script src="http://builds.emberjs.com/tags/v1.5.0/ember.js"></script>
-  <script src='http://bgrins.github.io/spectrum/spectrum.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.0.1/color-thief.min.js"></script>
 
 
 
 
-
-
-
-
-  <title>R/G/Beats</title>
-  <div class="site-name"><a href="/"><img src="/img/rgbelogo.png" alt="R/G/Beats"></a></div>
-  <div class="login">
-    <div class="nav-form-container">
-      <% if logged_in? %>
-        <div class='nav-loggedin'>
-          <a href="/logout">Logout</a>
-          <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
-        </div>
-      <% else %>
-        <div class='nav-notlogged'>
-          <a class="login-link" href="/session/new">Login</a>
-          <a class="register-link" href="/users/new">Register</a>
-          <div class="errors">
-            <% if @errors %>
-              <article> The name or password entered was incorrect.</article>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  <title>Chromesthetic</title>
+ <!-- <div class="site-name"><a href="/"><img src="/img/rgbelogo.png" alt="R/G/Beats"></a></div> -->
 </head>
-<body class="background">
+<body class="background container">
+<div class="site-name"><img src="/img/chromesthetic.png"></div>
   <%= yield %>
 </body>
 </html>
